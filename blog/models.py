@@ -7,5 +7,10 @@ class Post(models.Model):
     body = models.TextField()
 
     def __str__(self):
-        return f'{self.title}'
-        # return f'{self.title} by {self.author}'
+        value = ''
+        try:
+            value = f'{self.title} by {self.author}'
+        except:
+            value = f'{self.title}'
+
+        return value
