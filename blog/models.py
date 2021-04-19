@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
@@ -12,5 +12,7 @@ class Post(models.Model):
             value = f'{self.title} by {self.author}'
         except:
             value = f'{self.title}'
-
         return value
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])

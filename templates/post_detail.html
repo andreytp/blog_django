@@ -6,5 +6,7 @@
         <h2>{{ post.title }}</h2>
         <p>{{ post.body }}</p> 
     </div>
-    <a href="/">Back to Home</a>
+    <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>
+    <p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p>
+    <p><a href="/">Back to Home</a></p>
 {% endblock content %}
