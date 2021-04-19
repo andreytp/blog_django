@@ -8,6 +8,7 @@ django = "*"
 flake8 = "*"
 autopep8 = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
